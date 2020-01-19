@@ -5,18 +5,16 @@ import {
   StyleSheet,
   Image
 } from "react-native";
+import {Feather} from '@expo/vector-icons';
+import { Icon, Button, Container, Header, Content, Left,Font } from 'native-base'
 
-//library imports
-import { Icon, Button, Container, Header, Content, Left } from 'native-base'
-
-//custom components imports 
 import CustomHeader from './components/CustomHeader'
 
 class HomeScreen extends Component {
+
   static navigationOptions = ({ navigation }) => ({
     title: "Home",
-    headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
-    drawerLabel: 'Notification',
+    headerLeft: <Feather name="home" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
     drawerIcon: ({ tintColor }) => (
       <Image
         source={require('./assets/DrawerIcons/home.png')}
@@ -37,7 +35,7 @@ class HomeScreen extends Component {
           contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 10 }}>
           <Button
             onPress={() => this.props.navigation.navigate('Settings')} full>
-            <Text>Go To Settings Screen</Text>
+            <Text>Go To Settings Scree bfghfhn</Text>
           </Button>
         </Content>
 

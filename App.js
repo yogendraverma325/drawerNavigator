@@ -9,22 +9,12 @@ import {
 
 //library imports 
 import { Container, Content, Icon, Header, Body } from 'native-base'
-import { StackNavigator, SafeAreaView } from 'react-navigation'
+import { StackNavigator, SafeAreaView ,createAppContainer} from 'react-navigation'
 import {DrawerNavigatorItems ,createDrawerNavigator} from 'react-navigation-drawer';
-
+import {Feather} from '@expo/vector-icons';
 //custom files
 import SettingsScreen from './SettingsScreen'
 import HomeScreen from "./HomeScreen";
-
-
-export default class App extends Component {
-
-  render() {
-    return (
-      <MyApp />
-    )
-  }
-}
 
 const CustomDrawerContentComponent = (props) => (
 
@@ -82,3 +72,5 @@ const styles = StyleSheet.create({
   }
 
 })
+
+export default createAppContainer(MyApp);

@@ -4,18 +4,24 @@ import {
     Text,
     StyleSheet
 } from "react-native";
-
 import { Header, Body, Title, Content, Left, Icon, Right } from 'native-base'
-
+import {Feather} from '@expo/vector-icons';
 class CustomHeader extends Component {
+
+    async componentWillMount() {
+        await Font.loadAsync({
+          Roboto: require("native-base/Fonts/Roboto.ttf"),
+          Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
+        });
+        this.setState({ loading: false });
+      }
+    
     render() {
         return (
+          
             <Header>
-                <Left><Icon name="ios-menu" onPress={() => this.props.drawerOpen()} /></Left>
-                <Body>
-                    <Title>{this.props.title}</Title>
-                </Body>
-                <Right />
+                <Text onPress={() => this.props.drawerOpen()} >Open</Text>
+                
             </Header>
         );
     }
